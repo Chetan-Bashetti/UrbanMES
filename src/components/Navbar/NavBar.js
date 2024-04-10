@@ -35,7 +35,7 @@ const NavBar = () => {
 				{isMenuOpen ? <div className='logo-sm'>UrbanMES</div> : ''}
 				<ul>
 					{links.map((eachLink, id) => (
-						<li key={id}>
+						<li key={id} onClick={toggleMenu}>
 							<a href={`${eachLink.id}`} className='links'>
 								{isMenuOpen ? <div className='icons'>{eachLink.icon}</div> : ''}
 								<div style={{ marginLeft: '4px', fontWeight: 600 }}>
