@@ -1,0 +1,44 @@
+.contact-us-wrapper {
+	display: flex;
+	flex-direction: column;
+}
+
+.contact-us-title {
+	background: #1469e7;
+	color: white;
+	padding: 1em;
+	margin: 0 0.5em;
+	font-weight: 600;
+}
+
+.contact-input {
+	width: 385px;
+	margin: 0.5em !important;
+}
+
+.actions-wrapper {
+	margin-top: 1em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.actions {
+	font-family: 'Montserrat', sans-serif;
+	background: #1469e7;
+	letter-spacing: 1px;
+	font-weight: 600;
+	padding: 1em 0;
+	color: white;
+	border: 0px;
+	border-radius: 6px;
+	width: 100px;
+	margin: 0 0.5em;
+	text-align: center;
+}
+
+@media screen and (max-width: 599px) {
+	.contact-input {
+		width: 100%;
+	}
+}

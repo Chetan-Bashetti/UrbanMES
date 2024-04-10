@@ -1,0 +1,22 @@
+.footer-wrapper {
+	display: flex;
+	background: #1469e7;
+	justify-content: space-between;
+	padding: 2em 4em;
+	color: #e6eff7;
+}
+
+.footer-logo {
+	font-weight: 800;
+	font-size: 1.5em;
+}
+
+@media screen and (max-width: 699px) {
+	.footer-wrapper {
+		flex-direction: column;
+		padding: 2em;
+	}
+	.footer-logo {
+		margin-top: 1em;
+	}
+}
