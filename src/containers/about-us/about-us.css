@@ -53,6 +53,7 @@
 	.about-us-content-map {
 		flex-direction: column-reverse;
 		margin: 2em;
+		padding: 0;
 	}
 	.map {
 		margin-right: 0em;
