@@ -10,7 +10,7 @@ import Select from '@mui/material/Select';
 import './ContactUs.css';
 import { appliancesData } from '../../mock/appliances';
 
-const ContactUs = ({ handleClose }) => {
+const ContactUs = ({ handleClose, setSnackBar }) => {
 	const form = React.useRef();
 	const [houseNumber, setHouseNumber] = React.useState('');
 	const [street, setStreet] = React.useState('');
@@ -42,12 +42,12 @@ const ContactUs = ({ handleClose }) => {
 			})
 			.then(
 				() => {
-					console.log('SUCCESS!');
 					setStreet('');
 					setArea('');
 					setHouseNumber('');
 					setTypeofService('');
 					e.target.reset();
+					setSnackBar();
 				},
 				(error) => {
 					console.log('FAILED...', error.text);

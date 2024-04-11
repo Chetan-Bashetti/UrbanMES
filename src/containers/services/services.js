@@ -16,10 +16,13 @@ import { appliancesData } from '../../mock/appliances';
 import './services.css';
 import ServiceCard from '../../components/ServiceCard/ServiceCard';
 import MuiModal from '../../components/Modal/MuiModal';
+import Pricing from '../../components/Pricing/Pricing';
 
 const Services = () => {
 	const [open, setOpen] = React.useState(false);
 	const [selectedKey, setSelectedKey] = React.useState('');
+	const [pricingModel, setPricingModel] = React.useState(false);
+	const [selectedSubService, setSelectedSubService] = React.useState();
 
 	const icons = {
 		painting: <ImagesearchRollerIcon style={{ fontSize: '6em' }} />,
@@ -85,6 +88,10 @@ const Services = () => {
 										title={eachAppliance.title}
 										desc={eachAppliance.desc}
 										icon={icons[eachAppliance.key]}
+										onClick={(title) => {
+											setPricingModel(true);
+											setSelectedSubService(title);
+										}}
 									/>
 								)
 							)}
@@ -94,6 +101,21 @@ const Services = () => {
 				open={open}
 				handleOpen={handleOpen}
 				handleClose={handleClose}
+			/>
+			<MuiModal
+				children={
+					<div
+						style={{
+							display: 'flex',
+							flexDirection: 'column'
+						}}
+					>
+						<Pricing title={selectedSubService} />
+					</div>
+				}
+				open={pricingModel}
+				handleOpen={() => setPricingModel(true)}
+				handleClose={() => setPricingModel(false)}
 			/>
 		</div>
 	);

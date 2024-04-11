@@ -1,0 +1,61 @@
+.pricing-container {
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	flex-direction: column;
+	padding: 1em 0;
+}
+
+.each-service-price {
+	width: 300px;
+	display: flex;
+	justify-content: space-between;
+	padding: 0.5em;
+	cursor: pointer;
+	margin: 0.3em;
+	border-radius: 6px;
+}
+
+.service-price {
+	font-weight: 600;
+	font-size: 1em;
+}
+
+.total-service-price {
+	width: 300px;
+	display: flex;
+	flex-direction: column;
+	padding: 0.5em 0;
+	align-items: center;
+	justify-content: center;
+	padding-top: 3em;
+}
+.grand-total {
+	font-weight: 600;
+}
+
+.grand-total-price {
+	display: flex;
+	align-items: center;
+}
+
+.total-amount {
+	font-size: 3em;
+	font-weight: 600;
+	padding: 0 0.2em;
+}
+
+.note {
+	margin-top: 1em;
+	padding: 0.5em;
+	border: 1px solid lightgray;
+	border-radius: 6px;
+	color: #1469e7;
+	font-size: 0.8em;
+}
+
+@media screen and (max-width: 699px) {
+	.each-service-price {
+		width: -webkit-fill-available;
+	}
+}

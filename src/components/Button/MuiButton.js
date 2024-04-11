@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from '@mui/material';
 
-const MuiButton = ({ title = '', onClick, type }) => {
+const MuiButton = ({ title = '', onClick, type, disabled }) => {
 	return (
 		<Button
 			variant='contained'
@@ -13,6 +13,7 @@ const MuiButton = ({ title = '', onClick, type }) => {
 			}}
 			onClick={onClick}
 			type={type}
+			disabled={disabled}
 		>
 			{title}
 		</Button>

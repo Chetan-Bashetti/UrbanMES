@@ -22,10 +22,10 @@ const BannerDescription = ({ name = '', handleOpen }) => {
 	);
 };
 
-const Banner = () => {
+const Banner = ({ setSnackBar }) => {
 	const [open, setOpen] = React.useState(false);
 
-	const handleOpen = (key) => setOpen(true);
+	const handleOpen = () => setOpen(true);
 
 	const handleClose = () => setOpen(false);
 
@@ -46,7 +46,15 @@ const Banner = () => {
 			</div>
 
 			<MuiModal
-				children={<ContactUs handleClose={handleClose} />}
+				children={
+					<ContactUs
+						handleClose={handleClose}
+						setSnackBar={() => {
+							setSnackBar();
+							handleClose();
+						}}
+					/>
+				}
 				open={open}
 				handleClose={handleClose}
 			/>

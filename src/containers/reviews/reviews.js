@@ -1,6 +1,7 @@
 import React from 'react';
 import './review.css';
 import { reviews } from '../../mock/reviews';
+import { Rating } from '@mui/material';
 
 const Reviews = () => {
 	return (
@@ -17,6 +18,12 @@ const Reviews = () => {
 							className='review-user-icon'
 						/>
 						<div className='review-text'>
+							<Rating
+								name='read-only'
+								value={eachReview.rating}
+								readOnly
+								style={{ marginTop: '0.5em' }}
+							/>
 							<div className='user-name'>{eachReview.user}</div>
 							<div className='review-desc'>❝ {eachReview.review} ❞</div>
 						</div>
