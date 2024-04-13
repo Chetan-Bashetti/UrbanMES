@@ -19,7 +19,13 @@ const ClientInfo = () => {
 					Tecnacy Solutions
 				</a>
 			</div>
-			<div className='footer-logo'>UrbanMES</div>
+			<div className='footer-logo'>
+				<img
+					src={require('../../assets/images/MES Logo.jpg')}
+					alt='UrbanMES'
+					style={{ height: 60, width: 200 }}
+				/>
+			</div>
 		</div>
 	);
 };

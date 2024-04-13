@@ -3,6 +3,7 @@ import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 
 import MuiButton from '../Button/MuiButton';
 import './Pricing.css';
+import { PRIMARY_COLOR } from '../../mock/style';
 
 const Pricing = ({ title = 'AC' }) => {
 	const [visitingChanrges, setVisitingCharges] = React.useState({
@@ -61,7 +62,7 @@ const Pricing = ({ title = 'AC' }) => {
 					className='each-service-price'
 					style={{
 						border: visitingChanrges.isSelected
-							? '1px solid #1469e7'
+							? `1px solid ${PRIMARY_COLOR}`
 							: '1px solid transparent'
 					}}
 					onClick={() => selectVisitingCharges()}
@@ -70,7 +71,7 @@ const Pricing = ({ title = 'AC' }) => {
 						<CheckCircleIcon
 							style={{
 								color: visitingChanrges.isSelected
-									? '#1469e7'
+									? `${PRIMARY_COLOR}`
 									: 'rgb(209 209 209)'
 							}}
 						/>
@@ -82,7 +83,7 @@ const Pricing = ({ title = 'AC' }) => {
 					className='each-service-price'
 					style={{
 						border: installationCharges.isSelected
-							? '1px solid #1469e7'
+							? `1px solid ${PRIMARY_COLOR}`
 							: '1px solid transparent'
 					}}
 					onClick={() => selectInstallationCharges()}
@@ -91,7 +92,7 @@ const Pricing = ({ title = 'AC' }) => {
 						<CheckCircleIcon
 							style={{
 								color: installationCharges.isSelected
-									? '#1469e7'
+									? `${PRIMARY_COLOR}`
 									: 'rgb(209 209 209)'
 							}}
 						/>
@@ -105,7 +106,7 @@ const Pricing = ({ title = 'AC' }) => {
 					className='each-service-price'
 					style={{
 						border: serviceCharges.isSelected
-							? '1px solid #1469e7'
+							? `1px solid ${PRIMARY_COLOR}`
 							: '1px solid transparent'
 					}}
 					onClick={() => selectServiceCharges()}
@@ -114,7 +115,7 @@ const Pricing = ({ title = 'AC' }) => {
 						<CheckCircleIcon
 							style={{
 								color: serviceCharges.isSelected
-									? '#1469e7'
+									? `${PRIMARY_COLOR}`
 									: 'rgb(209 209 209)'
 							}}
 						/>

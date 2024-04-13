@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button } from '@mui/material';
+import { PRIMARY_COLOR } from '../../mock/style';
 
 const MuiButton = ({ title = '', onClick, type, disabled }) => {
 	return (
@@ -7,7 +8,7 @@ const MuiButton = ({ title = '', onClick, type, disabled }) => {
 			variant='contained'
 			style={{
 				fontFamily: "'Montserrat', sans-serif",
-				background: '#1469e7',
+				background: `${PRIMARY_COLOR}`,
 				letterSpacing: '1px',
 				fontWeight: 600
 			}}

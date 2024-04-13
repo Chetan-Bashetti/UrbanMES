@@ -33,7 +33,7 @@
 .review-user-icon {
 	height: 100px;
 	border-radius: 50%;
-	border: 2px solid #1469e7;
+	border: 2px solid var(--primary-bg);
 	padding: 10px;
 }
 

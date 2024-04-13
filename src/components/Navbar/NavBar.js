@@ -29,10 +29,26 @@ const NavBar = () => {
 
 	return (
 		<header>
-			<div className='logo'>UrbanMES</div>
+			<div className='logo'>
+				<img
+					src={require('../../assets/images/MES Logo.jpg')}
+					alt='UrbanMES'
+					style={{ height: 75, width: 200 }}
+				/>
+			</div>
 
 			<nav className={isMenuOpen ? 'open' : ''}>
-				{isMenuOpen ? <div className='logo-sm'>UrbanMES</div> : ''}
+				{isMenuOpen ? (
+					<div className='logo-sm'>
+						<img
+							src={require('../../assets/images/MES Logo.jpg')}
+							alt='UrbanMES'
+							style={{ height: 75, width: 200, paddingBottom: '0.6em' }}
+						/>
+					</div>
+				) : (
+					''
+				)}
 				<ul>
 					{links.map((eachLink, id) => (
 						<li key={id} onClick={toggleMenu}>

@@ -50,7 +50,7 @@
 	padding: 0.5em;
 	border: 1px solid lightgray;
 	border-radius: 6px;
-	color: #1469e7;
+	color: var(--primary-bg);
 	font-size: 0.8em;
 }
 

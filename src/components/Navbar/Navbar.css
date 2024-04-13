@@ -5,15 +5,17 @@ header {
 	justify-content: space-between;
 	align-items: center;
 	height: 50px;
-	background: #1469e7;
+	background: var(--primary-bg);
 	box-shadow: rgba(17, 12, 46, 0.15) 0px 9px 14px 0px;
 	z-index: 1;
 }
 
 .logo {
-	color: #e6eff7;
-	font-weight: 800;
-	font-size: 1.5em;
+	display: flex;
+	margin-top: 3em;
+	padding: 1em;
+	background: #312f5e;
+	border-radius: 6px;
 }
 
 nav {
@@ -65,7 +67,7 @@ nav ul li {
 		height: 100%;
 		padding: 10px;
 		transition: left 0.3s ease;
-		background: #1469e7;
+		background: var(--primary-bg);
 		z-index: 1;
 	}
 
@@ -73,6 +75,7 @@ nav ul li {
 		left: 0; /* slide into view */
 		box-shadow: rgba(17, 12, 46, 0.15) 7px 0px 15px 0px;
 		align-items: flex-start;
+		width: -webkit-fill-available;
 	}
 
 	nav ul {
@@ -89,7 +92,7 @@ nav ul li {
 
 	nav ul li:hover {
 		background: white;
-		color: #1469e7;
+		color: var(--primary-bg);
 	}
 
 	.mobile-menu-icon {
@@ -108,9 +111,9 @@ nav ul li {
 		width: 100%;
 		height: 100px;
 		align-items: center;
-		justify-content: center;
+		justify-content: flex-start;
 		display: flex;
-		font-size: 3em;
+		padding-left: 0.5em;
 		border-bottom: 1px solid lightgray;
 	}
 }

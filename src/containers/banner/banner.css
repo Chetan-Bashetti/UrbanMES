@@ -28,7 +28,7 @@
 }
 
 .product-name {
-	color: #1469e7;
+	color: var(--primary-bg);
 	font-size: 3em;
 	font-weight: 900;
 }

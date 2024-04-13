@@ -1,8 +1,8 @@
 .footer-wrapper {
 	display: flex;
-	background: #1469e7;
+	background: var(--primary-bg);
 	justify-content: space-between;
-	padding: 2em 4em;
+	padding: 2em 5em;
 	color: #e6eff7;
 	align-items: center;
 }
@@ -15,7 +15,7 @@
 @media screen and (max-width: 699px) {
 	.footer-wrapper {
 		flex-direction: column;
-		padding: 2em;
+		padding: 1em 2em;
 	}
 	.footer-logo {
 		margin-top: 1em;

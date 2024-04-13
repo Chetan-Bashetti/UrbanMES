@@ -4,7 +4,7 @@
 }
 
 .contact-us-title {
-	background: #1469e7;
+	background: var(--primary-bg);
 	color: white;
 	padding: 1em;
 	margin: 0 0.5em;
@@ -25,7 +25,7 @@
 
 .actions {
 	font-family: 'Montserrat', sans-serif;
-	background: #1469e7;
+	background: var(--primary-bg);
 	letter-spacing: 1px;
 	font-weight: 600;
 	padding: 1em 0;

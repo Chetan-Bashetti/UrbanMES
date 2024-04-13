@@ -7,6 +7,7 @@ import MuiButton from '../../components/Button/MuiButton';
 import './about-us.css';
 import MuiModal from '../../components/Modal/MuiModal';
 import ContactUs from '../../components/ContactUs/ContactUs';
+import { PRIMARY_COLOR } from '../../mock/style';
 const AboutUs = () => {
 	const [open, setOpen] = React.useState(false);
 
@@ -20,7 +21,7 @@ const AboutUs = () => {
 			<div className='about-us-content-map'>
 				<div className='map'>
 					<iframe
-						src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.8783630235766!2d77.5881115762125!3d12.97963088733652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae166dd8fee8b7%3A0xa3112775dc579453!2sVidhana%20Soudha%2C%20Ambedkar%20Veedhi%2C%20Sampangi%20Rama%20Nagar%2C%20Bengaluru%2C%20Karnataka%20560001%2C%20India!5e0!3m2!1sen!2smy!4v1712745568271!5m2!1sen!2smy'
+						src='https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3887.37697833258!2d77.67902699999999!3d13.011649!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTPCsDAwJzQxLjkiTiA3N8KwNDAnNDQuNSJF!5e0!3m2!1sen!2smy!4v1712975531570!5m2!1sen!2smy'
 						width='100%'
 						height='450'
 						style={{ border: 0, outline: 'none' }}
@@ -58,12 +59,12 @@ const AboutUs = () => {
 									);
 								}}
 							/>
-							<div style={{ width: 40 }} />
+							<div style={{ width: 20 }} />
 							<a href='tel:+919060003573'>
 								<CallIcon
 									style={{
 										fontSize: '3em',
-										color: '#1469e7'
+										color: `${PRIMARY_COLOR}`
 									}}
 								/>
 							</a>
