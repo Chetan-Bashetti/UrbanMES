@@ -16,6 +16,7 @@ header {
 	padding: 1em;
 	background: #312f5e;
 	border-radius: 6px;
+	box-shadow: rgba(17, 12, 46, 0.15) 0px 9px 14px 0px;
 }
 
 nav {
@@ -54,6 +55,14 @@ nav ul li {
 
 .icons {
 	display: none;
+}
+.logo {
+	margin-top: 1em;
+}
+
+.logo-img {
+	height: 75px;
+	width: 200px;
 }
 
 @media (max-width: 768px) {
@@ -115,6 +124,11 @@ nav ul li {
 		display: flex;
 		padding-left: 0.5em;
 		border-bottom: 1px solid lightgray;
+	}
+
+	.logo-img {
+		height: 60px;
+		width: 150px;
 	}
 }
 

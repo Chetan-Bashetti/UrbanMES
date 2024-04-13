@@ -33,7 +33,7 @@ const NavBar = () => {
 				<img
 					src={require('../../assets/images/MES Logo.jpg')}
 					alt='UrbanMES'
-					style={{ height: 75, width: 200 }}
+					className='logo-img'
 				/>
 			</div>
 
@@ -43,7 +43,8 @@ const NavBar = () => {
 						<img
 							src={require('../../assets/images/MES Logo.jpg')}
 							alt='UrbanMES'
-							style={{ height: 75, width: 200, paddingBottom: '0.6em' }}
+							className='logo-img'
+							style={{ paddingBottom: '0.6em' }}
 						/>
 					</div>
 				) : (
