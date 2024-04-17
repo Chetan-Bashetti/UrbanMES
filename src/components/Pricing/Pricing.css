@@ -54,6 +54,12 @@
 	font-size: 0.8em;
 }
 
+.cleaning-chages-header {
+	align-items: center;
+	justify-content: center;
+	font-weight: 600;
+}
+
 @media screen and (max-width: 699px) {
 	.each-service-price {
 		width: -webkit-fill-available;

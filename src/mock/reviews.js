@@ -1,23 +1,36 @@
 export const reviews = [
 	{
-		user: 'Rupesh Patil',
+		user: 'bijaylakshmi swain',
+		gender: 'f',
+		rating: 4,
+		review:
+			'Fantabulous timely service! mainly focused on customer demand as well as their satisfaction.'
+	},
+	{
+		user: 'enzin choezin',
+		gender: 'm',
+		rating: 5,
+		review: 'Awesome service! utmost good faith amongst the members. '
+	},
+	{
+		user: 'chinmay deborra',
 		gender: 'm',
 		rating: 4,
 		review:
-			'Good hospitality by Manager Ravi, nice ambience specially at evening and night. We stayed for 2 nights. The food in the cafe is good. They are developing their hotel. We enjoyed dinner at sea shore watching the spectacular views of sea at night. '
+			'Very good timely responded service and also all the employees and service centre has a friendly relationship with utmost customer satisfaction.'
 	},
 	{
-		user: 'Shikha Makkar',
-		gender: 'f',
+		user: 'raghavendra chakraborthy',
+		gender: 'm',
+		rating: 4,
+		review:
+			'Outstanding service provider with the motive of attaining client contentment.'
+	},
+	{
+		user: 'mohammed asif',
+		gender: 'm',
 		rating: 5,
 		review:
-			"This is the excellent place to stay in Gokarna if you are a nature lover and love peace and serenity. Great location as it's just couple of steps away from Gokarna beach and you can actually hear sound of waves from your room. Staff (especially Mahadev ji) was very helpful and tried his best to made our stay wonderful. Laundry and wifi services are also available. Rooms were near and clear. Also, Other beaches are just few km away where you can easily trek to."
-	},
-	{
-		user: 'Prashanth N Kanchan',
-		gender: 'm',
-		rating: 3,
-		review:
-			' Good stay.... Nice food and service by the owner. Service by Ravi Raj was very supportive... Nice view... Very good location and very suitable for events.'
+			'Happy service provider, with attentive and knowledgeable staffs providing excellent recommendations and ensuring our utmost satisfaction. recommended for all.'
 	}
 ];

@@ -5,32 +5,27 @@ import MuiButton from '../Button/MuiButton';
 import './Pricing.css';
 import { PRIMARY_COLOR } from '../../mock/style';
 
-const Pricing = ({ title = 'AC' }) => {
+const Pricing = ({ title = 'AC', appliaceData }) => {
 	const [visitingChanrges, setVisitingCharges] = React.useState({
-		charges: 100,
+		charges: 250,
 		isSelected: false
 	});
-	const [installationCharges, setInstallationCharges] = React.useState({
-		charges: 350,
-		isSelected: false
-	});
+
 	const [serviceCharges, setServiceCharges] = React.useState({
 		charges: 200,
 		isSelected: false
 	});
 	const [totalCharges, setTotalCharges] = React.useState(0);
+	const [cleaningCharges, setCleaningCharges] = React.useState([]);
+
+	React.useEffect(() => {
+		if (appliaceData?.charges?.length) setCleaningCharges(appliaceData.charges);
+	}, [appliaceData]);
 
 	const selectVisitingCharges = () => {
 		setVisitingCharges({
 			...visitingChanrges,
 			isSelected: !visitingChanrges.isSelected
-		});
-	};
-
-	const selectInstallationCharges = () => {
-		setInstallationCharges({
-			...installationCharges,
-			isSelected: !installationCharges.isSelected
 		});
 	};
 
@@ -45,12 +40,20 @@ const Pricing = ({ title = 'AC' }) => {
 		let totalAmount = 0;
 		if (visitingChanrges.isSelected)
 			totalAmount = totalAmount + visitingChanrges.charges;
-		if (installationCharges.isSelected)
-			totalAmount = totalAmount + installationCharges.charges;
 		if (serviceCharges.isSelected)
 			totalAmount = totalAmount + serviceCharges.charges;
+		cleaningCharges?.map((eachCharge) =>
+			eachCharge.isSelected ? (totalAmount += eachCharge.charge) : 0
+		);
 		setTotalCharges(totalAmount);
-	}, [visitingChanrges, installationCharges, serviceCharges]);
+	}, [visitingChanrges, serviceCharges, cleaningCharges]);
+
+	const handleCleaningCharges = (id) => {
+		let localCharges = [...cleaningCharges];
+		localCharges[id].isSelected = !localCharges[id].isSelected;
+		console.log(localCharges);
+		setCleaningCharges(localCharges);
+	};
 
 	return (
 		<div className='pricing-wrapper'>
@@ -82,29 +85,6 @@ const Pricing = ({ title = 'AC' }) => {
 				<div
 					className='each-service-price'
 					style={{
-						border: installationCharges.isSelected
-							? `1px solid ${PRIMARY_COLOR}`
-							: '1px solid transparent'
-					}}
-					onClick={() => selectInstallationCharges()}
-				>
-					<div style={{ display: 'flex', alignItems: 'center' }}>
-						<CheckCircleIcon
-							style={{
-								color: installationCharges.isSelected
-									? `${PRIMARY_COLOR}`
-									: 'rgb(209 209 209)'
-							}}
-						/>
-						<div style={{ marginLeft: '0.3em' }}>Installation charges</div>
-					</div>
-					<div className='service-price'>
-						Rs {installationCharges.charges}/-
-					</div>
-				</div>
-				<div
-					className='each-service-price'
-					style={{
 						border: serviceCharges.isSelected
 							? `1px solid ${PRIMARY_COLOR}`
 							: '1px solid transparent'
@@ -123,6 +103,46 @@ const Pricing = ({ title = 'AC' }) => {
 					</div>
 					<div className='service-price'>Rs {serviceCharges.charges}/-</div>
 				</div>
+
+				{cleaningCharges?.length ? (
+					<div className='each-service-price cleaning-chages-header'>
+						Cleaning services & charges
+					</div>
+				) : (
+					''
+				)}
+
+				{cleaningCharges?.length ? (
+					<>
+						{cleaningCharges.map((eachCharge, id) => (
+							<div
+								key={id}
+								className='each-service-price'
+								style={{
+									border: eachCharge.isSelected
+										? `1px solid ${PRIMARY_COLOR}`
+										: '1px solid transparent'
+								}}
+								onClick={() => handleCleaningCharges(id)}
+							>
+								<div style={{ display: 'flex', alignItems: 'center' }}>
+									<CheckCircleIcon
+										style={{
+											color: eachCharge.isSelected
+												? `${PRIMARY_COLOR}`
+												: 'rgb(209 209 209)'
+										}}
+									/>
+									<div style={{ marginLeft: '0.3em' }}>{eachCharge.title}</div>
+								</div>
+								<div className='service-price'>Rs {eachCharge.charge}/-</div>
+							</div>
+						))}
+					</>
+				) : (
+					''
+				)}
+
 				<div className='note'>
 					Note: Please select the required service by clicking
 				</div>

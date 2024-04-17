@@ -54,7 +54,7 @@ const AboutUs = () => {
 								style={{ fontSize: '3em', color: '#01e676' }}
 								onClick={() => {
 									window.open(
-										`https://wa.me/+919060003573?text=Hi, I wanted to check if this UrbanMES?`,
+										`https://wa.me/+918710048980?text=Hi, I wanted to check if this UrbanMES?`,
 										'_blank'
 									);
 								}}
