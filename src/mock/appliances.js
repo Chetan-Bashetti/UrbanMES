@@ -119,7 +119,7 @@ export const appliancesData = [
 	{
 		title: 'Prestige construction',
 		key: 'key_project',
-		desc: 'Keys projects conent description here',
+		desc: 'Prestige construction projects',
 		sub_services: [
 			{
 				title: 'Site preparation phase',
