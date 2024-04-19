@@ -85,7 +85,7 @@ const ContactUs = ({ handleClose, setSnackBar }) => {
 	return (
 		<div className='contact-us-wrapper'>
 			<div className='contact-us-title'>Book a visit</div>
-			{!submit ? (
+			{submit ? (
 				<div className='progress-wrapper'>
 					<CircularProgress />
 					<div className='please-wait-note'>Please wait</div>
