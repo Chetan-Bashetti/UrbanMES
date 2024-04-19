@@ -37,7 +37,7 @@ const ContactUs = ({ handleClose, setSnackBar }) => {
 		} else {
 			setNameError(false);
 		}
-		if (contactNumber[0].value === '' || contactNumber[0].value.length < 10) {
+		if (contactNumber[0].value === '' || contactNumber[0].value.length !== 10) {
 			setContactError(true);
 			return;
 		} else {
@@ -85,9 +85,10 @@ const ContactUs = ({ handleClose, setSnackBar }) => {
 	return (
 		<div className='contact-us-wrapper'>
 			<div className='contact-us-title'>Book a visit</div>
-			{submit ? (
+			{!submit ? (
 				<div className='progress-wrapper'>
 					<CircularProgress />
+					<div className='please-wait-note'>Please wait</div>
 				</div>
 			) : (
 				<div>
