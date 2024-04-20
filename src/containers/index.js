@@ -9,6 +9,7 @@ import AboutUs from './about-us/about-us';
 import ClientInfo from './client-Info/client-info';
 import FabIcon from './fab/fab';
 import { Snackbar } from '@mui/material';
+import CheckConnection from '../components/NetworkChecker/NetworkChecker';
 
 const Wrapper = () => {
 	const [snackBar, setSnackBar] = React.useState(false);
@@ -30,6 +31,7 @@ const Wrapper = () => {
 				autoHideDuration={5000}
 				message='Message sent, Thank you, we will contact you shortly'
 			/>
+			<CheckConnection />
 		</div>
 	);
 };
