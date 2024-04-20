@@ -82,18 +82,5 @@ const CheckConnection = () => {
 			</div>
 		</Snackbar>
 	);
-	// const [isOnline, set_isOnline] = React.useState(true);
-	// let interval = null;
-
-	// const InternetErrMessagenger = () => set_isOnline(navigator.onLine === true); // for do like this shortform
-
-	// useEffect(() => {
-	// 	interval = setInterval(InternetErrMessagenger, 1000);
-	// 	return () => {
-	// 		clearInterval(interval); // for component unmount stop the interval
-	// 	};
-	// }, []);
-
-	// return isOnline == true ? 'online' : 'offline';
 };
 export default CheckConnection;
