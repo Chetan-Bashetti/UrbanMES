@@ -23,7 +23,7 @@ const ClientInfo = () => {
 				<img
 					src={require('../../assets/images/MES Logo.jpg')}
 					alt='UrbanMES'
-					style={{ height: 60, width: 200 }}
+					style={{ height: 60, width: 150 }}
 				/>
 			</div>
 		</div>
