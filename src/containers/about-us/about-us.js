@@ -60,7 +60,7 @@ const AboutUs = () => {
 								}}
 							/>
 							<div style={{ width: 20 }} />
-							<a href='tel:+919060003573'>
+							<a href='tel:+918710048980'>
 								<CallIcon
 									style={{
 										fontSize: '3em',
