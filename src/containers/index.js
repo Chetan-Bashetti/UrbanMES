@@ -16,6 +16,20 @@ const Wrapper = () => {
 
 	const handleCloseSnack = () => setSnackBar(false);
 
+	React.useEffect(() => {
+		getData();
+	}, []);
+
+	const getData = async () => {
+		try {
+			await fetch('https://food-cart-app-production.up.railway.app/orders/list')
+				.then((res) => res.json())
+				.then((data) => console.log(data));
+		} catch (e) {
+			console.log(e);
+		}
+	};
+
 	return (
 		<div className='main-wrapper'>
 			<Banner setSnackBar={() => setSnackBar(true)} />
