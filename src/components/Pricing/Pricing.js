@@ -171,17 +171,7 @@ const Pricing = ({ title = 'AC', appliaceData }) => {
 						<div className='grand-total'>only</div>
 					</div>
 				</div>
-				<div>
-					{/* <MuiButton title='Pay now' disabled={totalCharges <= 0} /> */}
-					{/* <form>
-						<script
-							src='https://checkout.razorpay.com/v1/payment-button.js'
-							data-payment_button_id='pl_O2oF3wJhTrlp8F'
-							async
-						>
-							{' '}
-						</script>{' '}
-					</form> */}
+				<div style={{ marginTop: '2em' }}>
 					{mounted ? <form id='donateForm'></form> : null}
 				</div>
 			</div>
