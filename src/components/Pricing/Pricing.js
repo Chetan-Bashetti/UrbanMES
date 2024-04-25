@@ -6,16 +6,15 @@ import './Pricing.css';
 import { PRIMARY_COLOR } from '../../mock/style';
 
 const Pricing = ({ title = 'AC', appliaceData }) => {
-	const [visitingChanrges, setVisitingCharges] = React.useState({
+	const [visitingChanrges] = React.useState({
 		charges: 250,
 		isSelected: false
 	});
 
-	const [serviceCharges, setServiceCharges] = React.useState({
+	const [serviceCharges] = React.useState({
 		charges: 200,
 		isSelected: false
 	});
-	const [totalCharges, setTotalCharges] = React.useState(0);
 	const [cleaningCharges, setCleaningCharges] = React.useState([]);
 
 	const [mounted, setMounted] = React.useState(false);
@@ -63,7 +62,6 @@ const Pricing = ({ title = 'AC', appliaceData }) => {
 		cleaningCharges?.map((eachCharge) =>
 			eachCharge.isSelected ? (totalAmount += eachCharge.charge) : 0
 		);
-		setTotalCharges(totalAmount);
 	}, [visitingChanrges, serviceCharges, cleaningCharges]);
 
 	// const handleCleaningCharges = (id) => {
