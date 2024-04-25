@@ -1,7 +1,6 @@
 import React from 'react';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 
-import MuiButton from '../Button/MuiButton';
 import './Pricing.css';
 import { PRIMARY_COLOR } from '../../mock/style';
 
@@ -17,6 +16,24 @@ const Pricing = ({ title = 'AC', appliaceData }) => {
 	});
 	const [totalCharges, setTotalCharges] = React.useState(0);
 	const [cleaningCharges, setCleaningCharges] = React.useState([]);
+
+	const [mounted, setMounted] = React.useState(false);
+
+	React.useEffect(() => setMounted(true), []);
+
+	React.useEffect(() => {
+		const Script = document.createElement('script');
+		//id should be same as given to form element
+		const Form = document.getElementById('donateForm');
+		Script.setAttribute(
+			'src',
+			'https://checkout.razorpay.com/v1/payment-button.js'
+		);
+		Script.setAttribute('data-payment_button_id', 'pl_O2oF3wJhTrlp8F');
+		if (Form) {
+			Form.appendChild(Script);
+		}
+	}, [mounted]);
 
 	React.useEffect(() => {
 		if (appliaceData?.charges?.length) setCleaningCharges(appliaceData.charges);
@@ -155,7 +172,17 @@ const Pricing = ({ title = 'AC', appliaceData }) => {
 					</div>
 				</div>
 				<div>
-					<MuiButton title='Pay now' disabled={totalCharges <= 0} />
+					{/* <MuiButton title='Pay now' disabled={totalCharges <= 0} /> */}
+					{/* <form>
+						<script
+							src='https://checkout.razorpay.com/v1/payment-button.js'
+							data-payment_button_id='pl_O2oF3wJhTrlp8F'
+							async
+						>
+							{' '}
+						</script>{' '}
+					</form> */}
+					{mounted ? <form id='donateForm'></form> : null}
 				</div>
 			</div>
 		</div>
