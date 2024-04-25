@@ -45,13 +45,22 @@
 	padding: 0 0.2em;
 }
 
+.note-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
 .note {
 	margin-top: 1em;
 	padding: 0.5em;
-	border: 1px solid lightgray;
+	border: 1px solid #1469e7;
 	border-radius: 6px;
-	color: var(--primary-bg);
+	color: #1469e7;
 	font-size: 0.8em;
+	align-items: center;
+	display: flex;
+	font-weight: 500;
 }
 
 .cleaning-chages-header {
