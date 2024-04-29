@@ -1,0 +1,22 @@
+.rate-wrapper {
+	display: flex;
+	flex-direction: column;
+	padding: 2em 0;
+}
+
+.rate-title {
+	font-size: 2em;
+	margin-top: 1em;
+	font-weight: 700;
+	text-align: center;
+}
+
+.rate-content {
+	padding: 5em;
+}
+
+@media screen and (max-width: 599px) {
+	.rate-content {
+		padding: 1em;
+	}
+}
