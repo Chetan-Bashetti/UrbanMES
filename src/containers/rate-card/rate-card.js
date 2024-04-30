@@ -20,7 +20,7 @@ const RateCard = () => {
 						id='panel1-header'
 						style={{ background: '#312f5e', color: 'white', fontWeight: 600 }}
 					>
-						Service rate Card
+						Service rate card
 					</AccordionSummary>
 					<AccordionDetails style={{ padding: 0 }}>
 						<RateTable data={rateCard} />
