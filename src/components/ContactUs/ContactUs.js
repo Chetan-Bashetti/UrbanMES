@@ -249,7 +249,7 @@ const ContactUs = ({ handleClose, setSnackBar }) => {
 						</div>
 						<div className='actions-wrapper'>
 							<input
-								value={'cancel'}
+								value={'Cancel'}
 								className='actions'
 								onClick={() => {
 									handleClose();
