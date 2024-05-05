@@ -17,7 +17,6 @@ export const rateCard = [
 		charges: '300',
 		subCharges: '₹499 (Labour)'
 	},
-
 	{
 		desc: 'Contactor replaced',
 		charges: '₹500',
