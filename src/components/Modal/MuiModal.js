@@ -13,7 +13,8 @@ const style = {
 	outline: 'none',
 	fontFamily: "'Montserrat', sans-serif",
 	maxHeight: '80%',
-	overflow: 'scroll'
+	overflow: 'scroll',
+	maxWidth: '950px'
 };
 
 const MuiModal = ({ children, open, handleClose }) => {

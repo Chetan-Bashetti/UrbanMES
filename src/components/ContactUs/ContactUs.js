@@ -8,8 +8,8 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 
-import './ContactUs.css';
 import { appliancesData } from '../../mock/appliances';
+import './ContactUs.css';
 
 const ContactUs = ({ handleClose, setSnackBar }) => {
 	const form = React.useRef();
@@ -102,11 +102,11 @@ const ContactUs = ({ handleClose, setSnackBar }) => {
 								display: 'flex',
 								flexDirection: 'row',
 								flexWrap: 'wrap',
-								justifyContent: 'center'
+								justifyContent: 'center',
+								paddingTop: '1em'
 							}}
 						>
 							<TextField
-								// id='outlined-basic'
 								error={nameError ? true : false}
 								label='Name'
 								id={nameError ? 'outlined-error-helper-text' : 'outlined-basic'}
