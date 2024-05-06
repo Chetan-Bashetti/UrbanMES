@@ -12,7 +12,7 @@ const BannerDescription = ({ name = '', handleOpen }) => {
 				<div className='product-name'>UrbanMES</div>
 				<div className='product-desc'>Get quality services on demand</div>
 				<div className='product-desc-2'>
-					Experienced, hand-picked Professionals to serve you at your doorstep
+					Experienced, hand-picked professionals to serve you at your doorstep
 				</div>
 				<div style={{ marginTop: '3em' }}>
 					<MuiButton title='Book a visit' onClick={handleOpen} />
