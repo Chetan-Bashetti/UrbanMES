@@ -30,7 +30,6 @@ export const ContactUs = () => {
 			})
 			.then(
 				() => {
-					console.log('SUCCESS!');
 					setStreet('');
 					setArea('');
 					setHouseNumber('');
