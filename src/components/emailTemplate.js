@@ -44,7 +44,6 @@ export const ContactUs = () => {
 
 	const handleLocationPush = () => {
 		let textArea = document.getElementsByName('message');
-		console.log(textArea[0].value, 'TEXT AREA');
 		textArea[0].value += 'hello';
 	};
 
