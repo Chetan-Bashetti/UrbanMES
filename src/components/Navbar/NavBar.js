@@ -66,7 +66,17 @@ const NavBar = () => {
 
 			{/* Mobile Menu Toggle Icon */}
 			<div className='mobile-menu-icon' onClick={toggleMenu}>
-				{isMenuOpen ? <CloseIcon /> : <MenuIcon />}
+				{isMenuOpen ? (
+					<CloseIcon
+						style={{
+							position: 'fixed',
+							top: '1em',
+							right: '1em'
+						}}
+					/>
+				) : (
+					<MenuIcon />
+				)}
 			</div>
 		</header>
 	);
