@@ -27,7 +27,6 @@ const PhoneAuth = () => {
 				phoneNumber,
 				recaptcha
 			);
-			console.log(confirmation);
 			setUser(confirmation);
 		} catch (e) {
 			console.log(e);
