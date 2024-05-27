@@ -4,8 +4,9 @@ import ErrorIcon from '@mui/icons-material/Error';
 
 import './Pricing.css';
 import { PRIMARY_COLOR } from '../../mock/style';
+import MuiButton from '../Button/MuiButton';
 
-const Pricing = ({ title = 'AC', appliaceData }) => {
+const Pricing = ({ title = 'AC', appliaceData, handleBookingDialogBox }) => {
 	const [visitingChanrges] = React.useState({
 		charges: 250,
 		isSelected: false
@@ -165,16 +166,12 @@ const Pricing = ({ title = 'AC', appliaceData }) => {
 				) : (
 					''
 				)}
-
-				{/* <div className='total-service-price'>
-					<div className='grand-total'>Total</div>
-					<div className='grand-total-price'>
-						<div className='grand-total'>Rs</div>
-						<div className='total-amount'>{totalCharges}</div>
-						<div className='grand-total'>only</div>
-					</div>
-				</div> */}
-				<div style={{ marginTop: '2em' }}>
+				<div className='footer-actions'>
+					<MuiButton
+						title='Continue without payment'
+						onClick={handleBookingDialogBox}
+					/>
+					<div style={{ marginRight: '1em' }}></div>
 					{mounted ? <form id='donateForm'></form> : null}
 				</div>
 			</div>
