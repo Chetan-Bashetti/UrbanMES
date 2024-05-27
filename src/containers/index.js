@@ -10,7 +10,6 @@ import ClientInfo from './client-Info/client-info';
 import FabIcon from './fab/fab';
 import { Snackbar } from '@mui/material';
 import CheckConnection from '../components/NetworkChecker/NetworkChecker';
-import RateCard from './rate-card/rate-card';
 
 const Wrapper = () => {
 	const [snackBar, setSnackBar] = React.useState(false);
@@ -22,7 +21,6 @@ const Wrapper = () => {
 			<Banner setSnackBar={() => setSnackBar(true)} />
 			<Services />
 			<Reviews />
-			<RateCard />
 			<AboutUs />
 			<ClientInfo />
 			<FabIcon />
