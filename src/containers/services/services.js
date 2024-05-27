@@ -29,12 +29,14 @@ import './services.css';
 import ServiceCard from '../../components/ServiceCard/ServiceCard';
 import MuiModal from '../../components/Modal/MuiModal';
 import Pricing from '../../components/Pricing/Pricing';
+import ContactUs from '../../components/ContactUs/ContactUs';
 
-const Services = () => {
+const Services = ({ setSnackBar }) => {
 	const [open, setOpen] = React.useState(false);
 	const [selectedKey, setSelectedKey] = React.useState('');
 	const [pricingModel, setPricingModel] = React.useState(false);
 	const [selectedSubService, setSelectedSubService] = React.useState({});
+	const [bookingDialogOpen, setBookingDialogOpen] = React.useState(false);
 
 	const icons = {
 		painting: <ImagesearchRollerIcon style={{ fontSize: '6em' }} />,
@@ -83,7 +85,7 @@ const Services = () => {
 						onClick={
 							eachAppliance.sub_services.length
 								? () => handleOpen(id)
-								: () => {}
+								: () => setPricingModel(true)
 						}
 					/>
 				))}
@@ -139,12 +141,28 @@ const Services = () => {
 						<Pricing
 							title={selectedSubService.title}
 							appliaceData={selectedSubService}
+							handleBookingDialogBox={() => {
+								setBookingDialogOpen(true);
+							}}
 						/>
 					</div>
 				}
 				open={pricingModel}
 				handleOpen={() => setPricingModel(true)}
 				handleClose={() => setPricingModel(false)}
+			/>
+			<MuiModal
+				children={
+					<ContactUs
+						handleClose={() => setBookingDialogOpen(false)}
+						setSnackBar={() => {
+							setSnackBar();
+							handleClose();
+						}}
+					/>
+				}
+				open={bookingDialogOpen}
+				handleClose={() => setBookingDialogOpen(false)}
 			/>
 		</div>
 	);

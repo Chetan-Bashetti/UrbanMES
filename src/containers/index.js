@@ -19,7 +19,7 @@ const Wrapper = () => {
 	return (
 		<div className='main-wrapper'>
 			<Banner setSnackBar={() => setSnackBar(true)} />
-			<Services />
+			<Services setSnackBar={() => setSnackBar(true)} />
 			<Reviews />
 			<AboutUs />
 			<ClientInfo />
