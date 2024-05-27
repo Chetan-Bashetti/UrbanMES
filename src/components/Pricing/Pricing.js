@@ -171,7 +171,7 @@ const Pricing = ({ title = 'AC', appliaceData, handleBookingDialogBox }) => {
 						title='Continue without payment'
 						onClick={handleBookingDialogBox}
 					/>
-					<div style={{ marginRight: '1em' }}></div>
+					<div className='action-devider'></div>
 					{mounted ? <form id='donateForm'></form> : null}
 				</div>
 			</div>

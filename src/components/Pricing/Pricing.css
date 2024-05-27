@@ -73,6 +73,17 @@
 	.each-service-price {
 		width: -webkit-fill-available;
 	}
+	.footer-actions {
+		flex-direction: column;
+	}
+	.action-devider {
+		margin-bottom: 1em;
+		margin-right: 0em;
+	}
+}
+
+.action-devider {
+	margin-right: 1em;
 }
 
 .footer-actions {
