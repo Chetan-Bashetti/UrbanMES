@@ -25,11 +25,28 @@ const ContactUs = ({ handleClose, setSnackBar }) => {
 	const [locationError, setLocationError] = React.useState(false);
 	const [submit, setSubmit] = React.useState(false);
 
+	const genId = () => {
+		const currentMonth = new Date().getMonth() + 1;
+		const date = new Date().getDate().toString();
+		const month =
+			currentMonth.toString()?.length === 1
+				? '0' + currentMonth.toString()
+				: currentMonth.toString();
+
+		const time =
+			new Date().toLocaleTimeString().split(':')[0].toString() +
+			new Date().toLocaleTimeString().split(':')[1].toString();
+
+		const id = `MES-${date}${month}${time}`;
+		return id;
+	};
+
 	const sendEmail = (e) => {
 		e.preventDefault();
 		let message = document.getElementsByName('message');
 		let name = document.getElementsByName('to_name');
 		let contactNumber = document.getElementsByName('contact_number');
+		let id = genId();
 
 		if (name[0].value === '') {
 			setNameError(true);
@@ -51,6 +68,7 @@ const ContactUs = ({ handleClose, setSnackBar }) => {
 		}
 
 		message[0].value += `New Service request recieved, Details below <br/> <br/>
+		Id: <b>${id}</b>,<br/>
 		Name : <b>${name[0].value},</b> <br/>
 		Contact Number : <b><a href='+91'${contactNumber[0].value}'>${contactNumber[0].value}</a></b> <br/>
 		Address : <b>${houseNumber}, ${street}, ${area},</b> <br/>
@@ -254,6 +272,7 @@ const ContactUs = ({ handleClose, setSnackBar }) => {
 								onClick={() => {
 									handleClose();
 								}}
+								readOnly
 							/>
 							<input type='submit' value='Send' className='actions' />
 						</div>
