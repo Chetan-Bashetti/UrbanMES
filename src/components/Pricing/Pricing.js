@@ -40,20 +40,6 @@ const Pricing = ({ title = 'AC', appliaceData, handleBookingDialogBox }) => {
 		if (appliaceData?.charges?.length) setCleaningCharges(appliaceData.charges);
 	}, [appliaceData]);
 
-	// const selectVisitingCharges = () => {
-	// 	setVisitingCharges({
-	// 		...visitingChanrges,
-	// 		isSelected: !visitingChanrges.isSelected
-	// 	});
-	// };
-
-	// const selectServiceCharges = () => {
-	// 	setServiceCharges({
-	// 		...serviceCharges,
-	// 		isSelected: !serviceCharges.isSelected
-	// 	});
-	// };
-
 	React.useEffect(() => {
 		let totalAmount = 0;
 		if (visitingChanrges.isSelected)
@@ -64,13 +50,6 @@ const Pricing = ({ title = 'AC', appliaceData, handleBookingDialogBox }) => {
 			eachCharge.isSelected ? (totalAmount += eachCharge.charge) : 0
 		);
 	}, [visitingChanrges, serviceCharges, cleaningCharges]);
-
-	// const handleCleaningCharges = (id) => {
-	// 	let localCharges = [...cleaningCharges];
-	// 	localCharges[id].isSelected = !localCharges[id].isSelected;
-	// 	console.log(localCharges);
-	// 	setCleaningCharges(localCharges);
-	// };
 
 	return (
 		<div className='pricing-wrapper'>
