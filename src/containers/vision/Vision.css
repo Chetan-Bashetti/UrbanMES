@@ -21,15 +21,17 @@
 
 .idea-title {
 	text-align: center;
-	font-size: 1.2em;
+	font-size: 1.8em;
 	font-weight: 600;
 	color: var(--primary-bg);
-	margin-top: 2em;
+	border-bottom: 2px solid #dedede;
+	margin-bottom: 2em;
 }
 
 .idea-icon {
 	height: 200px;
 	width: 200px;
+	margin-bottom: 2em;
 }
 
 .vision-content ul li {
@@ -45,11 +47,25 @@
 		flex-direction: column;
 		padding: 0 2em;
 	}
-	.mission {
-		margin-top: 2em;
+	.idea-icon {
+		margin-top: 4em;
 		align-items: center;
 	}
+
+	.mission {
+		margin-top: 2em;
+	}
 	.vm-devider {
-		display: none;
+		height: 0px;
+		margin-top: 2em;
+		border: 0.5px solid #dedede;
+		width: 70%;
+	}
+	.vision-content ul {
+		padding-left: 1em;
+	}
+
+	.idea-title {
+		margin-bottom: 0;
 	}
 }

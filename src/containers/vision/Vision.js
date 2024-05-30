@@ -9,22 +9,22 @@ const Vision = () => {
 			<div className='services-title'>Vision & Mission</div>
 			<div className='vision-container'>
 				<div className='each-idea'>
+					<div className='idea-title'>Our vision</div>
 					<div className='idea-icon'>
 						<VisionIcon />
 					</div>
-					<div className='idea-title'>Vision</div>
 					<div className='vision-content'>
 						<ul>
-							<li>Joining hands together to grow together forever & ever</li>
+							<li>Joining hands together to grow together forever & ever.</li>
 						</ul>
 					</div>
 				</div>
 				<div className='vm-devider' />
 				<div className='each-idea mission'>
+					<div className='idea-title'>Our mission</div>
 					<div className='idea-icon'>
 						<MissionIcon />
 					</div>
-					<div className='idea-title'>Mission</div>
 					<div className='vision-content'>
 						<ul>
 							<li>
