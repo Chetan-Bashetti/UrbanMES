@@ -24,7 +24,6 @@ const Pricing = ({ title = 'AC', appliaceData, handleBookingDialogBox }) => {
 
 	React.useEffect(() => {
 		const Script = document.createElement('script');
-		//id should be same as given to form element
 		const Form = document.getElementById('donateForm');
 		Script.setAttribute(
 			'src',
