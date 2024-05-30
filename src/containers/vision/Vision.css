@@ -1,0 +1,55 @@
+.vision-wrapper {
+	display: flex;
+	flex-direction: column;
+}
+
+.vision-container {
+	margin-top: 6em;
+	display: flex;
+	padding: 0 19em;
+	align-items: center;
+	justify-content: center;
+}
+
+.each-idea {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	flex: 1;
+	height: -webkit-fill-available;
+}
+
+.idea-title {
+	text-align: center;
+	font-size: 1.2em;
+	font-weight: 600;
+	color: var(--primary-bg);
+	margin-top: 2em;
+}
+
+.idea-icon {
+	height: 200px;
+	width: 200px;
+}
+
+.vision-content ul li {
+	margin: 0.5em 0;
+}
+.vm-devider {
+	border: 0.5px solid #dedede;
+	height: 70%;
+}
+
+@media screen and (max-width: 999px) {
+	.vision-container {
+		flex-direction: column;
+		padding: 0 2em;
+	}
+	.mission {
+		margin-top: 2em;
+		align-items: center;
+	}
+	.vm-devider {
+		display: none;
+	}
+}
