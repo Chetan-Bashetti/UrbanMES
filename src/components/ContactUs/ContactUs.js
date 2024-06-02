@@ -95,7 +95,6 @@ const ContactUs = ({ handleClose, setSnackBar }) => {
 				},
 				(error) => {
 					setSubmit(false);
-					console.log('FAILED...', error.text);
 				}
 			);
 	};
