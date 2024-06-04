@@ -51,7 +51,7 @@ const AboutUs = () => {
 						<div className='about-us-content-title'>Get in touch</div>
 						<div style={{ marginTop: '1em', display: 'flex' }}>
 							<WhatsAppIcon
-								style={{ fontSize: '3em', color: '#01e676' }}
+								style={{ fontSize: '3em', color: '#01e676', cursor: 'pointer' }}
 								onClick={() => {
 									window.open(
 										`https://wa.me/+919019201221?text=Hi, I wanted to check if this UrbanMES?`,
