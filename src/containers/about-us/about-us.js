@@ -54,13 +54,13 @@ const AboutUs = () => {
 								style={{ fontSize: '3em', color: '#01e676' }}
 								onClick={() => {
 									window.open(
-										`https://wa.me/+918710048980?text=Hi, I wanted to check if this UrbanMES?`,
+										`https://wa.me/+919019201221?text=Hi, I wanted to check if this UrbanMES?`,
 										'_blank'
 									);
 								}}
 							/>
 							<div style={{ width: 20 }} />
-							<a href='tel:+918710048980'>
+							<a href='tel:+919019201221'>
 								<CallIcon
 									style={{
 										fontSize: '3em',
