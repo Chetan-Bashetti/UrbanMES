@@ -16,8 +16,8 @@ const AboutUs = () => {
 	const handleClose = () => setOpen(false);
 
 	return (
-		<div className='about-us-wrapper' id='about_us'>
-			<div className='about-us-title'>About us</div>
+		<div className='about-us-wrapper' id='contact_us'>
+			<div className='about-us-title'>Contact us</div>
 			<div className='about-us-content-map'>
 				<div className='map'>
 					<iframe

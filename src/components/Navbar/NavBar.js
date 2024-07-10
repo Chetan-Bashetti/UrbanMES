@@ -13,7 +13,7 @@ const NavBar = () => {
 	const links = [
 		{ title: 'home', id: '#home', icon: <HomeIcon /> },
 		{ title: 'services', id: '#services', icon: <MiscellaneousServicesIcon /> },
-		{ title: 'about us', id: '#about_us', icon: <SupervisorAccountIcon /> },
+		{ title: 'contact us', id: '#contact_us', icon: <SupervisorAccountIcon /> },
 		{
 			title: 'reviews',
 			id: '#reviews',
