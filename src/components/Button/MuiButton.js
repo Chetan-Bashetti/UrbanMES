@@ -2,7 +2,7 @@ import React from 'react';
 import { Button } from '@mui/material';
 import { PRIMARY_COLOR } from '../../mock/style';
 
-const MuiButton = ({ title = '', onClick, type, disabled }) => {
+const MuiButton = ({ title = '', onClick = {}, type, disabled }) => {
 	return (
 		<Button
 			variant='contained'

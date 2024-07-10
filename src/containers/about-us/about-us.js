@@ -44,7 +44,7 @@ const AboutUs = () => {
 					<div className='each-info'>
 						<div className='about-us-content-title'>Timings</div>
 						<div className='about-us-content-desc'>
-							Monday to Saturday 10:00 am to 08:00 pm
+							Monday to Saturday 09:30 am to 08:00 pm
 						</div>
 					</div>
 					<div className='each-info'>
