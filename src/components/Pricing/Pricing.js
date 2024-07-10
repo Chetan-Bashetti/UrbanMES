@@ -13,7 +13,7 @@ const Pricing = ({ title = 'AC', appliaceData, handleBookingDialogBox }) => {
 	});
 
 	const [serviceCharges] = React.useState({
-		charges: 200,
+		charges: 350,
 		isSelected: false
 	});
 	const [cleaningCharges, setCleaningCharges] = React.useState([]);
